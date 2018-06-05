@@ -32,12 +32,10 @@ function subscribe() {
 
                     if (!currentToken) {
                         console.warn('Не удалось получить токен.');
-                        setTokenSentToServer(false);
                     }
                 })
                 .catch(function (err) {
                     console.warn('При получении токена произошла ошибка.', err);
-                    setTokenSentToServer(false);
                 });
     })
     .catch(function (err) {
