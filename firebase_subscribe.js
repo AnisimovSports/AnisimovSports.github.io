@@ -19,6 +19,16 @@ if ('Notification' in window) {
     document.getElementById('subscribe').onclick = function () {
         subscribe();
     };
+
+    // получение фонового уведомления
+    messaging.setBackgroundMessageHandler(function(payload) {
+        console.log('Received background message', payload);
+    });
+
+    // получение активного уведомления
+    messaging.onMessage(function(payload) {
+        console.log('Received foreground message', payload);
+    });
 }
 
 function subscribe() {
