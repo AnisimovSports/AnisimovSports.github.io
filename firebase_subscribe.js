@@ -20,10 +20,12 @@ if ('Notification' in window) {
         subscribe();
     };
 
+    /*
     // получение фонового уведомления
     messaging.setBackgroundMessageHandler(function(payload) {
         console.log('Received background message', payload);
     });
+    */
 
     // получение активного уведомления
     messaging.onMessage(function(payload) {
