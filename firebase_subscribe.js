@@ -30,6 +30,7 @@ if ('Notification' in window) {
     // получение активного уведомления
     messaging.onMessage(function(payload) {
         console.log('Received foreground message', payload);
+        new Notification(payload.notification.title, payload.notification);
     });
 }
 
